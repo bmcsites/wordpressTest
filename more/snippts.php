@@ -1,6 +1,11 @@
-
+// websites related
 https://underscores.me/
+https://www.advancedcustomfields.com/
 
+
+//plugins  :
+Advanced Custom Fields
+Custom Post Type UI
 
 
 // template directory :
@@ -14,23 +19,23 @@ https://underscores.me/
 get_post_meta(page_id,key_name,single_boolien)
 
 
-// get attribute from database after using advence castum fileds plugin :
+// get attribute from database after using Advanced Custom Fields plugin :
 $income_section_title = get_field('Field Name');
 
 
-// echo image obj with if statment :
+// echo image obj with if statment with Advanced Custom Fields :
 	<?php if( !empty( $image ) ) : ?>
 		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 	<?php endif; ?>	
 
 
-// echo post title :
+// echo post title in loop:
 <?php the_title(); ?>
 
-// echo post content :
+// echo post content in loop :
 <?php the_content(); ?>	
 
-// echo post image :
+// echo post image in loop :
 	<?php
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail(array(width,height);// the_post_thumbnail(array(300,300)
@@ -65,7 +70,7 @@ $income_section_title = get_field('Field Name');
 	<?php wp_reset_query(); ?>
 
 	
-// loop for posts by type with CPT UI with Adavnced castum fileds:
+// loop for posts by type with CPT UI with Advanced Custom Fields:
 
 	<!-- define the loop -->
 	<?php $loop = new WP_Query(array('post_type' => 'Post Type Slug', 'orderby' => 'post_id' , 'order' => 'DES')); 
